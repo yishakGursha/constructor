@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Cleaner</title>
+</head>
+<body>
+    <div id="cleaner1"></div>
+    <div id="cleaner2"></div>
+
+    <script>
+        // House Cleaner Constructor
+        function HouseCleaner(name, age, experience) {
+            this.name = name;
+            this.age = age;
+            this.experience = experience;
+        }
+
+        // Prototype method to clean the house
+        HouseCleaner.prototype.cleanHouse = function() {
+            var message = this.name + " is cleaning the house.";
+            return message;
+        };
+
+        // Creating instances of HouseCleaner
+        var cleaner1 = new HouseCleaner("John", 30, 5);
+        var cleaner2 = new HouseCleaner("Sarah", 25, 3);
+
+        // Displaying the cleanHouse method for each cleaner
+        document.getElementById("cleaner1").innerText = cleaner1.cleanHouse();
+        document.getElementById("cleaner2").innerText = cleaner2.cleanHouse();
+    </script>
+</body>
+</html>
